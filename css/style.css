@@ -1,0 +1,24 @@
+body {
+	font-family: 'Roboto', Helvetica, sans-serif;
+	margin: 1em;
+}
+.btn {
+	color: white;
+	background-color: lightblue;
+}
+.glyphicon-star {
+	cursor: pointer;
+}
+.row {
+	font-size: 1.3em;
+	padding: 1em 0;
+}
+.add-form {
+	width: 35%;
+	margin-top: 2em;
+}
+@media (max-width: 600px) {
+	#add-book {
+		width: 90%;
+	}
+}

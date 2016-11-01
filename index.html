@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>BookSwap: Trade Books With Friends</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body class="container-fluid" ng-app="BookSwapApp" ng-controller="MainCtrl">
+		<ui-view></ui-view>
+		<script type="text/ng-template" id="/home.html">
+			<h1>Your Bookshelf</h1>
+			<div class="row" ng-repeat="book in books">
+				<div class="col-md-5">{{ book.title }} <small><a href="#/books/{{$index}}">Details</a></small></div>
+				<div class="col-md-4">{{ book.author }}</div>
+				<div class="col-md-2">Available</div>
+				<div class="col-md-1"><span class="glyphicon glyphicon-star" ng-click="incrFav(book)"></span></div>
+			</div>
+
+			<form class="add-form" ng-submit="addBook()">
+				<h3>Add A Book</h3>
+				<div class="form-group">
+					<input class="form-control" type="text" placeholder="Book Title" ng-model="title"></input>
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" placeholder="Author" ng-model="author"></input>
+				</div>
+				<button type="submit" class="btn btn-lg">Add</button>
+			</form>
+		</script>
+		<script type="text/ng-template" id="/books.html">
+			<div class="page-header">
+				<h2>{{ book.title }} <small>{{ book.author }}</small></h2>
+			</div>
+			<div ng-repeat="comment in book.comments">
+				<p><span class="glyphicon glyphicon-thumbs-up" ng-click="incrFav(comment)"></span> {{ comment.favorites }} {{ comment.body }} - {{ comment.author }}</p>
+			</div>
+			<form class="add-form" ng-submit="addComment()">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Add comment" ng-model="body"></input>
+				</div>
+				<button type="submit" class="btn">Post</button>
+			</form>
+		</script>
+	</body>
+</html>
