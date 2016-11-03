@@ -18,7 +18,9 @@ This app in currently in progress. The bulk of the back-end is built, but some f
 ## Screenshots
 ![Home page](screenshots/homepage.png)
 > Home page (user is logged in)
+
 ![Adding a book](screenshots/adding_book.png)
 > Adding a book
+
 ![Book page](screenshots/book_page.png)
 > Individual book page
