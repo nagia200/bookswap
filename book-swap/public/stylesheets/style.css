@@ -1,8 +1,106 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-family: 'Roboto Slab', Georgia, serif;
+	margin: 1em;
 }
-
-a {
-  color: #00B7FF;
+.add-form {
+	width: 20em;
+	margin-top: 1em;
+}
+.add-form input, .form-btn {
+	width: 100%;
+	padding: 1em;
+	margin: 0 auto;
+	border-style: none;
+	border-width: 0;
+}
+.add-form input:focus,
+.book-form input:focus {
+	background-color: lightgrey;
+	outline: none;
+}
+.book-form {
+	text-align: center;
+	margin: 1em 0 auto;
+}
+.book-form input {
+	padding: 1em;
+	margin: 0;
+	border: black 1px solid;
+	display: inline;
+}
+.book-content {
+	width: 100%;
+}
+.book-info {
+	color: white;
+	text-align: center;
+	width: 60%;
+	margin: 4em auto;
+	padding: 1em;
+	background-color: lightgreen;
+	background: -webkit-linear-gradient(left, lightgreen, lightblue);
+	background: linear-gradient(right, lightgreen, lightblue);
+}
+.book-info h2,
+.book-info h3 {
+	margin: 1em;
+}
+.book-info .action-btns {
+	margin: 8em 0 2em 0;
+}
+.book-row {
+	font-size: 1.2em;
+	color: white;
+	padding: 1em;
+	background-color: lightgreen;
+	background: -webkit-linear-gradient(left, lightgreen, lightblue);
+	background: linear-gradient(right, lightgreen, lightblue);
+}
+.book-row:hover {
+	background: #a8ffb6;
+}
+.book-row .availability {
+	text-align: right;
+}
+.btn {
+	color: white;
+	background-color: lightblue;
+	border-radius: 0;
+}
+.btn:hover {
+	background-color: lightgreen;
+	color: #fff;
+}
+.btn:focus {
+	outline: none;
+}
+.comments {
+	width: 60%;
+	margin: 1em auto;
+}
+.content form {
+	text-align: center;
+}
+.form-btn {
+	text-align: left;
+}
+.glyphicon {
+	cursor: pointer;
+}
+#add-book {
+	color: lightblue;
+}
+#add-book:hover {
+	color: lightgreen;
+}
+#add-book-span {
+	opacity: 0;
+}
+#home-header {
+	padding: 1em 0;
+}
+@media (max-width: 600px) {
+	#add-book {
+		width: 90%;
+	}
 }
