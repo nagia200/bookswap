@@ -13,4 +13,4 @@ The user can register an account and log in once an account has been created. On
 Each book on the Bookshelf has its own page that includes a comments section and buttons for requesting the book (if it's available) and adding it to the user's Wish List. Adding comments are allowed for logged in users only.
 
 ## In Progress
-This app in currently in progress. The bulk of the back-end is built, but some features, such as a Wish List for each user, confirmation of deleting books/comments, and Autofill for easily adding books (and book images) are still being implemented. The front-end will follow after user testing the UX/UI prototype designs.
+This app in currently in progress. The bulk of the back-end is built, but some features, such as a Wish List for each user, confirmation of deleting books/comments, and Autofill for easily adding books (and book images) are still being implemented. The front-end will follow after the UX design is solidified with user testing and research.
